@@ -1,3 +1,8 @@
-ZLO - ZetLab OPC
+# zlo - ZetLab OPC
 
-Simple OPC (Ole for Process Control) library. Support specifications OPC DA 2 & 3.
+Simple OPC (Ole for Process Control) library.
+
+## Supported specifications
+* OPC DA 2
+* OPC DA 3
+
