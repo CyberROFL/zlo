@@ -8,6 +8,11 @@
 namespace zlo {
 namespace utils {
 
+// Simple tuple with 3 arguments.
+//  1. Return value.
+//  2. Code of error.
+//  3. String with description of error code.
+
 template< typename T >
 class obtained_return
 {
@@ -39,6 +44,10 @@ private:
     DWORD   _id;
     tstring _what;
 };
+
+// Explains error code.
+//
+// Return: tuple with return value, error code and description.
 
 template< typename T >
 inline const typename obtained_return< T > obtain_return(
@@ -85,10 +94,10 @@ inline const typename obtained_return< T > obtain_return(
             NULL ); // No inserts
     }
 
-    // Construct message string first
+    // Construct message string first.
     tstring what(reinterpret_cast< LPCTSTR >(pBuffer));
 
-    // Free buffer after
+    // Free buffer after.
     ::LocalFree( pBuffer );
 
     return obtained_return< T >(return_, errorId, what);

@@ -13,6 +13,8 @@
 namespace zlo {
 namespace utils {
 
+// Wraps and manage IUnknown*.
+
 template< typename TUnknown = IUnknown >
 class instance : public boost::noncopyable
 {

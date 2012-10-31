@@ -8,6 +8,8 @@
 
 namespace zlo {
 
+// Keeps instance alive for session.
+
 class session
 {
 public:

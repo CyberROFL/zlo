@@ -9,9 +9,17 @@
 namespace zlo {
 namespace utils {
 
+// Checks the availability of DCOM on host 'hostName' synchronously.
+//
+// Return: true - if ping successfull, false - otherwise.
+
 const obtained_return< bool > rpc_ping(
     const tstring& hostName,
     const int&     timeout );
+
+// Checks the availability of DCOM on host 'hostName' asynchronously.
+//
+// Result of ping will be passed to the callback function 'f'.
 
 const void rpc_ping_async(
     const tstring& hostName,
