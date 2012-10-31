@@ -1,4 +1,4 @@
-# zlo - ZetLab OPC
+# zlo
 
 Simple OPC (Ole for Process Control) library.
 
