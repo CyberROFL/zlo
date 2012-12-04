@@ -9,7 +9,8 @@ session::session(
 
     _name(name)
 {
-    _instance.create( hostName, &IID_IOPCServer, clsId );
+    if (!_instance.create( hostName, &IID_IOPCServer, clsId ))
+        zlo_throw_exception( create_instance_failed );
 }
 
 } // namespace zlo

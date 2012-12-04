@@ -2,6 +2,7 @@
 #define zlo_session_hpp__
 
 #include <zlo_types.hpp>
+#include <zlo_exception.hpp>
 #include <opc/zlo_opc_instances.hpp>
 
 #include <windows.h>

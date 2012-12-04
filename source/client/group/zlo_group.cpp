@@ -1,6 +1,6 @@
 #include <client/group/zlo_group.hpp>
 #include <client/group/detail/zlo_group_impl.hpp>
-#include <client/group/item/zlo_item.hpp>
+#include <client/group/item/zlo_group_item.hpp>
 #include <session/zlo_session.hpp>
 
 #include <boost/make_shared.hpp>

@@ -35,6 +35,8 @@ public:
         client* const  parent );
 
 public:
+    client* const getClient() const { return _parent; };
+
     item* const addItem( const tstring& name );
 
     void removeItem( const tstring& name );

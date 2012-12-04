@@ -1,6 +1,6 @@
 #include <client/group/detail/zlo_group_impl.hpp>
 #include <client/group/detail/data_callback/data_callback.hpp>
-#include <client/group/item/zlo_item.hpp>
+#include <client/group/item/zlo_group_item.hpp>
 #include <session/zlo_session.hpp>
 
 #include <boost/make_shared.hpp>
@@ -108,7 +108,7 @@ client::group::item_ptr client::group::impl::addItem(
     if (FAILED(hResult))
         return item_ptr();
 
-    // Do operations before freeing
+    // Do operations before freeing.
     _hash_map.insert( hash_map::value_type(pItem[0].hClient, name) );
     item_ptr ret = boost::make_shared< item >(name, pResult[0].hServer, group_);
 
@@ -153,9 +153,9 @@ bool client::group::impl::writeItem(
     HRESULT*    pError   = NULL;
 
     phServer[0]                     = item_->getHandle();
-    pItemVQT[0].vDataValue	        = value;
-    pItemVQT[0].wQuality	        = quality;
-    pItemVQT[0].bQualitySpecified	= TRUE;
+    pItemVQT[0].vDataValue          = value;
+    pItemVQT[0].wQuality            = quality;
+    pItemVQT[0].bQualitySpecified   = TRUE;
     pItemVQT[0].bTimeStampSpecified = FALSE;
     pItem   [0]                     = value;
 

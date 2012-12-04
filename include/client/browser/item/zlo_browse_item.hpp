@@ -31,7 +31,7 @@ public:
 public:
     const tstring& getName() const  { return _name; };
 
-    const type& getType() const     { return _type; };
+    const type& getItemType() const     { return _type; };
 
     item* const getParent() const   { return _parent; };
 

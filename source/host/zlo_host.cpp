@@ -24,7 +24,7 @@ server_list host::browse()
     opc::enum_instance opcEnum;
 
     if (!opcEnum.create( _name, &IID_IOPCServerList, CLSID_OpcServerList ))
-        return server_list();
+        zlo_throw_exception( opc_enum_unavailable );
 
     // Filter
     CATID filter[] = { IID_CATID_OPCDAServer20 };

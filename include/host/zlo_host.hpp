@@ -27,6 +27,7 @@ class host :
 {
 public:
     zlo_decl_exception( host_unreachable );
+    zlo_decl_exception( opc_enum_unavailable );
 
 public:
     host( const tstring& name );
